@@ -4,20 +4,21 @@ import com.x.abstractfactory.factory.ArmyFactory;
 import com.x.abstractfactory.product.Archer;
 import com.x.abstractfactory.product.Lancer;
 import com.x.abstractfactory.product.Saber;
-import com.x.abstractfactory.product.impl.ElfArcher;
-import com.x.abstractfactory.product.impl.ElfLancer;
-import com.x.abstractfactory.product.impl.ElfSaber;
 
 public class ElfArmyFactory implements ArmyFactory {
+    private ElfLancerFactory elfLancerFactory = new ElfLancerFactory();
+    private ElfSaberFactory elfSaberFactory = new ElfSaberFactory();
+    private ElfArcherFactory elfArcherFactory = new ElfArcherFactory();
+
     public Lancer createLancer() {
-        return new ElfLancer();
+        return elfLancerFactory.getSoldier();
     }
 
     public Saber createSaber() {
-        return new ElfSaber();
+        return elfSaberFactory.getSoldier();
     }
 
     public Archer createArcher() {
-        return new ElfArcher();
+        return elfArcherFactory.getSoldier();
     }
 }

@@ -9,15 +9,19 @@ import com.x.abstractfactory.product.impl.OrcLancer;
 import com.x.abstractfactory.product.impl.OrcSaber;
 
 public class OrcArmyFactory implements ArmyFactory {
+    private OrcLancerFactory orcLancerFactory = new OrcLancerFactory();
+    private OrcSaberFactory orcSaberFactory = new OrcSaberFactory();
+    private OrcArcherFactory orcArcherFactory = new OrcArcherFactory();
+
     public Lancer createLancer() {
-        return new OrcLancer();
+        return orcLancerFactory.getSoldier();
     }
 
     public Saber createSaber() {
-        return new OrcSaber();
+        return orcSaberFactory.getSoldier();
     }
 
     public Archer createArcher() {
-        return new OrcArcher();
+        return orcArcherFactory.getSoldier();
     }
 }

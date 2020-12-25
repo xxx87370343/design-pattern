@@ -9,15 +9,19 @@ import com.x.abstractfactory.product.impl.GodLancer;
 import com.x.abstractfactory.product.impl.GodSaber;
 
 public class GodArmyFactory implements ArmyFactory {
+    private GodLancerFactory godLancerFactory = new GodLancerFactory();
+    private GodSaberFactory godSaberFactory = new GodSaberFactory();
+    private GodArcherFactory godArcherFactory = new GodArcherFactory();
+
     public Lancer createLancer() {
-        return new GodLancer();
+        return godLancerFactory.getSoldier();
     }
 
     public Saber createSaber() {
-        return new GodSaber();
+        return godSaberFactory.getSoldier();
     }
 
     public Archer createArcher() {
-        return new GodArcher();
+        return godArcherFactory.getSoldier();
     }
 }
