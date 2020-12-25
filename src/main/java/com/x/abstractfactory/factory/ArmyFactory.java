@@ -1,5 +1,6 @@
 package com.x.abstractfactory.factory;
 
+import com.x.abstractfactory.product.Archer;
 import com.x.abstractfactory.product.Lancer;
 import com.x.abstractfactory.product.Saber;
 
@@ -12,4 +13,5 @@ import com.x.abstractfactory.product.Saber;
 public interface ArmyFactory {
     public Lancer createLancer();
     public Saber createSaber();
+    public Archer createArcher();
 }
