@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<army>
+    <name>一号军</name>
+    <soldiers>
+        <soldier>
+            <name>张三</name>
+            <weapon>剑</weapon>
+        </soldier>
+        <soldier>
+            <name>李四</name>
+            <weapon>刀</weapon>
+        </soldier>
+    </soldiers>
+</army>
