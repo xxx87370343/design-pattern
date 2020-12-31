@@ -3,6 +3,7 @@ package com.x.adapter;
 public class App {
     public static void main(String[] args) {
         new DataCollector(new XmlDataShower()).showData();
+        new DataCollector(new JsonDataShowerAdapter()).showData();
     }
 
 //    public void getResource() {
