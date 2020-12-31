@@ -9,6 +9,18 @@
         <soldier>
             <name>李四</name>
             <weapon>刀</weapon>
+            <k>
+                <y>1</y>
+                <x>2</x>
+            </k>
         </soldier>
     </soldiers>
+    <officers>
+        <officer>
+            <name>王五</name>
+        </officer>
+        <officer>
+            <name>赵六</name>
+        </officer>
+    </officers>
 </army>

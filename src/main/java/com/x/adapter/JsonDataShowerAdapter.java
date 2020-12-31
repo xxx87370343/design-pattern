@@ -26,6 +26,9 @@ public class JsonDataShowerAdapter implements DataShower {
 
     public Map putElementDataToMap(Element e) {
         Map<Object, Object> map = new HashMap<Object, Object>();
+        if(e.isTextOnly()) {
+            map.put(e.getName(), e.getText());
+        }
         for (Iterator i = e.elementIterator(); i.hasNext();) {
             Element next = (Element) i.next();
             if(next.isTextOnly()) {
